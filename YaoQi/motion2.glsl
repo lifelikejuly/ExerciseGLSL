@@ -1,11 +1,11 @@
-#iChannel0 "file:///Volumes/JulyKit/AllProjects/ExerciseGLSL/Stroker/s909_1306.png"
-#iChannel1 "file:///Volumes/JulyKit/AllProjects/ExerciseGLSL/Stroker/noise1.jpg"
-#iChannel2 "file:///Volumes/JulyKit/AllProjects/ExerciseGLSL/Stroker/noise2.png"
-#iChannel3 "file:///Volumes/JulyKit/AllProjects/ExerciseGLSL/Stroker/noise3.png"
+#iChannel0 "file:///Volumes/JulyStudio/AllProjects/GLSL/Stroker/s909_1306.png"
+#iChannel1 "file:///Volumes/JulyStudio/AllProjects/GLSL/Stroker/noise1.jpg"
+#iChannel2 "file:///Volumes/JulyStudio/AllProjects/GLSL/Stroker/noise2.png"
+#iChannel3 "file:///Volumes/JulyStudio/AllProjects/GLSL/Stroker/noise3.png"
 
 
 #define SPEED 0.1
-#define RANGE 0.9
+#define RANGE 0.2
 
 
 
