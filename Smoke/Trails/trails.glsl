@@ -1,6 +1,8 @@
-#iChannel1 "file:///Volumes/JulyKit/AllProjects/ExerciseGLSL/Stroker/noise1.jpg"
-#iChannel0 "file:///Volumes/JulyKit/AllProjects/ExerciseGLSL/Stroker/s909_1306.png"
 
+#iChannel0 "file://self"
+#iChannel1 "file://./res/s909_1306.png"
+
+#define SPEED 0.1
 
 vec2 distort(vec2 uv) {
     vec2 a0 = vec2(0.5, 0.2);
@@ -15,17 +17,21 @@ vec2 distort(vec2 uv) {
 
 
 void main(){
+
+
+    float t = iTime;
+
     vec2 uv = gl_FragCoord.xy/iResolution.xy;
-    vec3 col = vec3(1.0);
-    vec3 cam = pow(texture(iChannel1, uv + 0.5).xyz, vec3(2.2));
+
+
+    vec3 col = texture(iChannel0, distort(uv)).xyz;
+    vec3 cam = pow(texture( iChannel1, uv).xyz, vec3(2.2));
     cam = vec3(dot(cam, vec3(.2126, .7152, .0722)));
     cam = smoothstep(0.4, 0.6, cam);
-    col = max(col * vec3(0.95, 0.7, 0.2), cam);
+    col = max(col * vec3(0.95, 0.85, 1.0), cam);
     // Output to screen
     vec4 fragColor = vec4(vec3(col),1.0);
-
-    vec3 col2 = fragColor.xyz;
     
     // Output to screen
-    gl_FragColor = vec4(pow(col2, vec3(0.4545)),1.0);
+    gl_FragColor = fragColor;
 }

@@ -1,5 +1,5 @@
 
-#iChannel0 "file:///Volumes/JulyStudio/AllProjects/GLSL/Stroker/s909_1306.png"
+#iChannel0 "file:///Volumes/JulyKit/AllProjects/ExerciseGLSL/Stroker/green.jpg"
 
 
 //https://www.shadertoy.com/view/csc3W8 
@@ -18,14 +18,14 @@ void main() {
     gl_FragColor = texture(iChannel0,uv);
     offset = offset * strength;
     vec4 col = texture(iChannel0, uv);
-    if (col.a > 1.0){
+    if (col.g > 1.0){
         gl_FragColor = vec4(0.0);
     }else {
-        float a = texture(iChannel0, vec2(uv.x + offset, uv.y)).a +
-            texture(iChannel0, vec2(uv.x, uv.y - offset)).a +
-            texture(iChannel0, vec2(uv.x - offset, uv.y)).a +
-            texture(iChannel0, vec2(uv.x, uv.y + offset)).a;
-        if (col.a < 1.0 && a > 0.0){
+        float g = texture(iChannel0, vec2(uv.x + offset, uv.y)).g +
+            texture(iChannel0, vec2(uv.x, uv.y - offset)).g +
+            texture(iChannel0, vec2(uv.x - offset, uv.y)).g +
+            texture(iChannel0, vec2(uv.x, uv.y + offset)).g;
+        if (col.g < 1.0 && g > 0.0){
             float progress = mod(iTime, duration) / duration;
             float currentAlpha = maxAlpha*(1.0-progress);
             float currentScale = 1.0 + (maxScale-1.0) * progress;

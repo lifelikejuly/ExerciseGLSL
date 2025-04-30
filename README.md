@@ -34,3 +34,15 @@ https://www.shadertoy.com/view/wscyRf
 
 
 https://inspirnathan.com/posts/62-shadertoy-tutorial-part-15#buffers
+
+
+彩色外框
+
+https://www.youtube.com/watch?v=QCq0x7-Kt3o
+
+https://www.shadertoy.com/view/4t3cD2
+
+
+残影效果
+
+https://www.bilibili.com/video/BV19b411D74s/?vd_source=a7e2287c99c30ec7d715c362b6698898

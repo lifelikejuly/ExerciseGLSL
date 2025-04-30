@@ -1,15 +1,11 @@
-#iChannel0 "file:///Volumes/JulyStudio/AllProjects/GLSL/Stroker/s909_1306.png"
-#iChannel1 "file:///Volumes/JulyStudio/AllProjects/GLSL/Stroker/noise1.jpg"
-#iChannel2 "file:///Volumes/JulyStudio/AllProjects/GLSL/Stroker/noise2.png"
-#iChannel3 "file:///Volumes/JulyStudio/AllProjects/GLSL/Stroker/noise3.png"
+#iChannel0 "file:///./res/s909_1306.png"
+#iChannel1 "file:///./res/noise1.jpg"
+#iChannel2 "file:///./res/noise2.png"
+#iChannel3 "file:///./res/noise3.png"
 
 
 #define SPEED 0.1
-#define RANGE 0.2
-
-
-
-float offset = 5.0  / 128.0;
+#define RANGE 0.5
 
 void main() {
 
@@ -50,22 +46,15 @@ void main() {
 		
 	noise = noise * 2.0 - 1.0;
     vec4 newVal = texture2D(iChannel0 ,uv+noise*SPEED);
-	// vec4 newVal = vec4(vec3(0.95, 0.85, 1.0) ,uv+noise*SPEED); //speed 0.005 0.015 0.045
+	// vec4 newVal = vec4(vec3(1.0) ,uv+noise*SPEED);	//speed 0.005 0.015 0.045
 
-    // 计算到画面中心的距离
-    vec2 center = vec2(0.5, 0.5);
-    float dist = distance(uv, center);
-    // 涟漪波纹函数，参数可调
-    float ripple = 0.5 + 0.5 * sin(30.0 * dist - t * 6.0);
-    float rippleFade = smoothstep(0.0, 0.5, 1.0 - dist); // 控制边缘渐隐
-
-	vec4 resultColor = vec4(0.95, 0.85, 1.0, 1.0) * newVal * 0.975 * (1.0 + ripple * rippleFade * 0.7);	//0.975 削弱色彩强度
+	vec4 resultColor = vec4(0.95, 0.85, 1.0, 1.0) * newVal *0.975;	//0.975 削弱色彩强度
 	// vec2 noise2 = texture2D(iChannel3,uv1*vec2(ratio,1.2)*5.0 - t*1.55).xy;
 	// resultColor = resultColor+scColor * length(noise*noise2) * RANGE; //range is 3.5	,0 to 7
      if (color1.a >= 0.1){
         gl_FragColor = vec4(0.0);
     }else{
-         gl_FragColor = resultColor;
+        gl_FragColor = resultColor;
     }
     
 
