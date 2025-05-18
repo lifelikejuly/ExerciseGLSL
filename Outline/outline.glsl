@@ -1,5 +1,5 @@
 
-#iChannel0 "file:///Volumes/JulyKit/AllProjects/ExerciseGLSL/Stroker/s909_1306.png"
+#iChannel0 "file://./res/s909_1306.png"
 
 
 //https://www.shadertoy.com/view/csc3W8 

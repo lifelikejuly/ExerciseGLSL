@@ -35,7 +35,7 @@ void main() {
 	resultColor = resultColor+scColor * length(noise*noise2) * RANGE; //range is 3.5	,0 to 7
     
     // if (scColor.a >= 0.1){
-    // //     gl_FragColor = scColor;
+        // gl_FragColor = scColor;
     // }else{
         gl_FragColor = resultColor;
     // }

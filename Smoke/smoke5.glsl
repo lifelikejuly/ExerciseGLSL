@@ -1,6 +1,6 @@
 
-#iChannel0 "file:///Volumes/JulyKit/AllProjects/ExerciseGLSL/Stroker/green.jpg"
-#iChannel1 "file:///Volumes/JulyKit/AllProjects/ExerciseGLSL/Stroker/s909_1306.png"
+#iChannel0 "file://./res/green.jpg"
+#iChannel1 "file://./res/s909_1306.png"
 
 //https://github.com/rbaltrusch/smoke_shader/blob/master/smoke_shader.frag
 

@@ -1,7 +1,5 @@
-// #iChannel0 "file:///Volumes/JulyKit/AllProjects/ExerciseGLSL/Stroker/noise1.jpg"
 #iChannel0 "self"
 #iChannel1 "file://./res/s909_1306.png"
-// #iChannel1 "file://./res/dance.mov"
 #iChannel2 "file://./res/noise3.png"
 
 #define SPEED 0.008

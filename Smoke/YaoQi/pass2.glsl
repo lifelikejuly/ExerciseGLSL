@@ -8,10 +8,10 @@ void main() {
 
     vec2 uv = gl_FragCoord.xy / iResolution.xy;
 
-    vec2 uv2 = uv;
-    uv2.x -= 0.015 * sin(iTime);
-    uv2.y -= 0.015 * cos(iTime);
-    vec4 scColor = texture2D(iChannel2,uv2);
+    // vec2 uv2 = uv;
+    // uv2.x -= 0.015 * sin(iTime);
+    // uv2.y -= 0.015 * cos(iTime);
+    // vec4 scColor = texture2D(iChannel2,uv2);
 
     vec2 uv1 = vec2(uv.x,1.0-uv.y);
     vec4 color1 = texture2D(iChannel0, uv);
@@ -27,7 +27,7 @@ void main() {
     // if (scColor.a >= 0.1){
     //     gl_FragColor = scColor;
     // }else{
-        gl_FragColor = resultColor;
+    //     gl_FragColor = resultColor;
     // }
-    // gl_FragColor = resultColor;
+    gl_FragColor = resultColor;
 }

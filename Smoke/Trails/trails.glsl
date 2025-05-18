@@ -2,6 +2,11 @@
 #iChannel0 "file://self"
 #iChannel1 "file://./res/s909_1306.png"
 
+
+
+// 随机干扰
+
+
 #define SPEED 0.1
 
 vec2 distort(vec2 uv) {

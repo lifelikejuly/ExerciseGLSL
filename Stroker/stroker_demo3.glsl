@@ -1,8 +1,8 @@
 
-#iChannel0 "file:///Volumes/JulyKit/AllProjects/ExerciseGLSL/Stroker/s909_1306.png"
-#iChannel1 "file:///Volumes/JulyKit/AllProjects/ExerciseGLSL/Stroker/noise1.jpg"
-#iChannel2 "file:///Volumes/JulyKit/AllProjects/ExerciseGLSL/Stroker/noise2.png"
-#iChannel3 "file:///Volumes/JulyKit/AllProjects/ExerciseGLSL/Stroker/noise3.png"
+#iChannel0 "file://./res/s909_1306.png"
+#iChannel1 "file://./res/noise1.jpg"
+#iChannel2 "file://./res/noise2.png"
+#iChannel3 "file://./res/noise3.png"
 
 //https://www.shadertoy.com/view/csc3W8 
 
